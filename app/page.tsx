@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function BakusaiViewer() {
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<{ num: string; date: string; msg: string }[]>([]);
   const [title, setTitle] = useState("");
 
   function getTid(url) {
