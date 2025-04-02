@@ -14,7 +14,8 @@ export default function BakusaiViewer() {
   }
 
   async function fetchAllPages(tid) {
-    const allPosts = [];
+    const allPosts: { num: string; date: string; msg: string }[] = [];
+
     let finalTitle = "";
     for (let tp = 50; tp >= 1; tp--) {
       const res = await fetch(`/api/bakusai?tid=${tid}&tp=${tp}`);
